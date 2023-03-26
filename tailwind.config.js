@@ -24,8 +24,8 @@ module.exports = {
         accent: '#B809C3',
       },
       backgroundImage: {
-        "site": "url('/portfolio-next-js/site-bg.jpg')", // For production
-        // "site": "url('/site-bg.jpg')", // For development
+        // "site": "url('/portfolio-next-js/site-bg.jpg')", // For production
+        "site": "url('/site-bg.jpg')", // For development
       },
     },
   },

@@ -22,7 +22,7 @@ function Home() {
                             viewport={{ once: false, amount: 0.7 }}
                             className='text-[30px] font-bold leading-[0.8] lg:text-[60px]'
                         >
-                            Hi, I'm Pradeeshwar
+                            Hi, I&apos;m Pradeeshwar
                         </motion.h1>
                         <motion.div
                             variants={fadeIn('up', 0.4)}

@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav"
 
-function projects() {
+function Projects() {
     return (
         <section id='projects' className='bg-site bg-no-repeat bg-cover overflow-hidden h-screen'>
             <Nav />
@@ -9,4 +9,4 @@ function projects() {
     )
 }
 
-export default projects
+export default Projects

@@ -11,7 +11,7 @@ import { fadeIn } from '../variants';
 import TagCloud from 'TagCloud'
 import Nav from '@/components/Nav';
 
-function about() {
+function About() {
 
     useEffect(() => {
         return () => {
@@ -100,4 +100,4 @@ function about() {
     )
 }
 
-export default about
+export default About

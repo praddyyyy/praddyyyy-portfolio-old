@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav"
 
-function contact() {
+function Contact() {
     return (
         <section id='contact' className='bg-site bg-no-repeat bg-cover overflow-hidden h-screen'>
             <Nav />
@@ -9,4 +9,4 @@ function contact() {
     )
 }
 
-export default contact
+export default Contact

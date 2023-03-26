@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import Nav from '@/components/Nav'
 
-function home() {
+function Home() {
 
     return (
         <section id='home' className='bg-site bg-no-repeat bg-cover overflow-hidden h-screen flex items-center'>
@@ -102,4 +102,4 @@ function home() {
     )
 }
 
-export default home
+export default Home

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import HomeView from './Home'
+import HomeView from './HomeView'
 
 export default function Home() {
   return (

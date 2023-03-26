@@ -10,22 +10,22 @@ function Nav() {
             <div className='container mx-auto'>
                 <div className='w-full bg-black/20 h-[75px] backdrop-blur-2xl rounded-full max-w-[450px] mx-auto
                 flex px-5 justify-between text-2xl text-white/50 items-center '>
-                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/home' ? 'active' : ''
-                        }`} href='/home'>
+                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/' ? 'active' : ''
+                        }`} href='/'>
                         <BiHomeAlt />
                     </Link>
-                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/about' ? 'active' : ''
-                        }`} href='/about'>
+                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/About' ? 'active' : ''
+                        }`} href='/About'>
                         <BiUser />
                     </Link>
-                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/projects' ? 'active' : ''
+                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/Projects' ? 'active' : ''
                         }
-                    `} href='/projects'>
+                    `} href='/Projects'>
                         <BsClipboardData />
                     </Link>
-                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/contact' ? 'active' : ''
+                    <Link className={`h-[50px] w-[50px] cursor-pointer flex items-center justify-center ${router.pathname === '/Contact' ? 'active' : ''
                         }
-                    `} href='/contact'>
+                    `} href='/Contact'>
                         <BsChatSquareText />
                     </Link>
                 </div>

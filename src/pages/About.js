@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 import CountUp from 'react-countup';
 
 import { useInView } from 'react-intersection-observer';
@@ -8,36 +6,11 @@ import { motion } from 'framer-motion';
 
 import { fadeIn } from '../variants';
 
-import TagCloud from 'TagCloud'
 import Nav from '@/components/Nav';
 
-function About() {
+import { TagCloud } from "@frank-mayer/react-tag-cloud";
 
-    useEffect(() => {
-        return () => {
-            const cotainer = '.tagcloud';
-            const texts = [
-                'JavaScript',
-                'React',
-                'Nodejs',
-                'Express.js',
-                'HTML5',
-                'MongoDB',
-                'CSS3',
-                'Git',
-                'GitHub',
-                'Figma',
-                'Python'
-            ];
-            const options = {
-                radius: 200,
-                maxSpeed: 'normal',
-                initSpeed: 'normal',
-                keep: true,
-            }
-            TagCloud(cotainer, texts, options);
-        }
-    }, [])
+function About() {
 
     const { ref, inView } = useInView({
         threshold: 0.5,
@@ -53,8 +26,48 @@ function About() {
                         initial="hidden"
                         whileInView={'show'}
                         viewport={{ once: false, amount: 0.3 }}
-                        className='tagcloud'
-                    ></motion.div>
+                    >
+                        <TagCloud
+                            options={(w) => ({
+                                radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
+                                maxSpeed: "fast",
+                            })}
+                            onClickOptions={{ passive: true }}
+                        >
+                            {[
+                                'VSCode',
+                                'Framer Motion',
+                                'Next',
+                                'Tailwind',
+                                'Linux',
+                                'JavaScript',
+                                'React',
+                                'Nodejs',
+                                'Express.js',
+                                'HTML5',
+                                'MongoDB',
+                                'CSS3',
+                                'Git',
+                                'GitHub',
+                                'Figma',
+                                'Python',
+                                'C++',
+                                'C',
+                                'Flask',
+                                'Bootstrap',
+                                'React Native',
+                                'Firebase',
+                                'MongoDB Atlas',
+                                'PostgreSQL',
+                                'MySQL',
+                                'SQLite',
+                                'Tensorflow',
+                                'OpenCV',
+                                'Scikit-learn',
+                                'Jupyter Notebook',
+                            ]}
+                        </TagCloud>
+                    </motion.div>
                     <motion.div
                         variants={fadeIn('left', 0.5)}
                         initial="hidden"

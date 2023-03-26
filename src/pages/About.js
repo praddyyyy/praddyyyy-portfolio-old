@@ -1,7 +1,5 @@
 import CountUp from 'react-countup';
 
-import { useInView } from 'react-intersection-observer';
-
 import { motion } from 'framer-motion';
 
 import { fadeIn } from '../variants';
@@ -12,12 +10,9 @@ import { TagCloud } from "@frank-mayer/react-tag-cloud";
 
 function About() {
 
-    const { ref, inView } = useInView({
-        threshold: 0.5,
-    });
 
     return (
-        <section id="about" className="bg-site bg-no-repeat bg-cover overflow-hidden h-screen section" ref={ref}>
+        <section id="about" className="bg-site bg-no-repeat bg-cover overflow-hidden h-screen section">
             <Nav />
             <div className='container mx-auto'>
                 <div className='flex flex-col items-center gap-y-2 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
@@ -31,6 +26,8 @@ function About() {
                             options={(w) => ({
                                 radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
                                 maxSpeed: "fast",
+                                itemClass: 'tag-cloud-item',
+                                containerClass: 'tag-cloud-container',
                             })}
                             onClickOptions={{ passive: true }}
                         >
@@ -82,9 +79,7 @@ function About() {
                         <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
                             <div>
                                 <div className='text-[40px] font-tertiary text-gradient mb-2'>
-                                    {
-                                        inView ? <CountUp start={0} end={3} duration={3} /> : null
-                                    }
+                                    <CountUp start={0} end={3} duration={4} />
                                 </div>
                                 <div className='font-primary text-sm tracking-[2px]'>
                                     Years of <br /> Experience
@@ -93,10 +88,7 @@ function About() {
 
                             <div>
                                 <div className='text-[40px] font-tertiary text-gradient mb-2'>
-                                    {
-                                        inView ? <CountUp start={0} end={10} duration={3} /> : null
-                                    }
-                                    +
+                                    <CountUp start={0} end={10} duration={5} suffix='+' enableScrollSpy={true} scrollSpyDelay={10} />
                                 </div>
                                 <div className='font-primary text-sm tracking-[2px]'>
                                     Projects <br /> Completed

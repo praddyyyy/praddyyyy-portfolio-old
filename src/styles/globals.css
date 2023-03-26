@@ -162,6 +162,11 @@ a {
   border-radius: 100%;
 }
 
+.tag-cloud-container:hover {
+  cursor: grab;
+  user-select: none;
+}
+
 @layer base {
   body {
     @apply font-secondary text-lg leading-8 text-white;
